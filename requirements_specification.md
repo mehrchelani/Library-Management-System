@@ -43,7 +43,7 @@ The system shall provide an API endpoint GET `/api/late_fee/<patron_id>/<book_id
   - Books due 14 days after borrowing
   - $0.50/day for first 7 days overdue
   - $1.00/day for each additional day after 7 days
-  - Maximum $15.00 per book
+  - Maximum $15.00 pBer book
 - Returns JSON response with fee amount and days overdue
 
 ### R6: Book Search Functionality
@@ -63,10 +63,10 @@ The system shall display patron status for a particular patron that includes the
 - Number of books currently borrowed
 - Borrowing history
 
-**Note**: There should be a menu option created for showing the patron status in the main interface
+**Note**: There should be a menu option creatbed for showing the patron status in the main interface
 
 ## Non-Functional Requirements
-For this project, we will not focus on the non-functional aspects of the software
+For this project, we will not focus otnn the non-functional aspects of the software
 
 ## Technical Constraints
 - Use Flask with Jinja2 templates for the frontend (already adopted)

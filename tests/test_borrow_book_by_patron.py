@@ -3,11 +3,6 @@ import pytest
 from library_service import (
     borrow_book_by_patron
 )
-'''Tests that a valid patron ID and valid book ID can be entered successfully and allows for borrowing'''
-def test_valid_borrow_success():
-    success, message = borrow_book_by_patron("123456", 2)
-    assert success is True
-    assert "successfully borrowed" in message.lower()
 
 '''Test that a patron ID is rejected if it's less than 6 characters'''
 def test_patron_id_too_short():

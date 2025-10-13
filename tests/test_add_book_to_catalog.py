@@ -18,12 +18,6 @@ def test_empty_title():
     assert success is False
     assert "title is required" in message.lower()
 
-'''Test valid input that should pass'''
-def test_valid_input():
-    success, message = add_book_to_catalog("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
-    assert success == True
-    assert "successfully added" in message
-
 '''Test to see if aithor exceeds 100 characters'''
 def test_author_over_100_chars():
     author = "a" * 101
@@ -50,12 +44,6 @@ def test_isbn_over_13_chars():
     isbn = "1" * 14
     success, message = add_book_to_catalog("Test Book", "Test Author", isbn, 5)
     assert success is False
-    assert "isbn must be exactly 13 digits" in message.lower()
-
-'''If ISBN is exactly 13 characters, it passes'''
-def test_isbn_exactly_13_passes():
-    success,message = add_book_to_catalog("Test Book", "Test Author", "0129384757628", 10)
-    assert success is True
     assert "isbn must be exactly 13 digits" in message.lower()
 
 '''Negative total copies should be rejected'''

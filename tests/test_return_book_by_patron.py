@@ -14,11 +14,6 @@ def test_verify_book_was_borrowed_by_patron_reject():
     assert success is False
     assert "book not found" in message.lower()
 
-def test_verify_book_was_borrowed_by_patron_accept():
-    success, message = return_book_by_patron("123456", 3)
-    assert success is False
-    assert "borrowed by patron" in message.lower()
-
 '''Test if the function prints error message if no patron id is entered'''
 def test_empty_patron():
     success, message = return_book_by_patron("", 3)

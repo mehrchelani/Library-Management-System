@@ -10,6 +10,16 @@ def test_search_exact_isbn():
     assert len(search) == 1 
     assert search[0]["title"] == "To Kill a Mockingbird"
 
+def test_search_greater_isbn():
+    search = search_books_in_catalog("978006112008412", "isbn")
+    assert len(search) == 1 
+    assert search[0]["title"] == "To Kill a Mockingbird"
+
+def test_search_less_than_isbn():
+    search = search_books_in_catalog("978006114", "isbn")
+    assert len(search) == 1 
+    assert search[0]["title"] == "To Kill a Mockingbird"
+
 '''Test searching for a case-insensitive book title'''
 def test_search_case_insensitive():
     search = search_books_in_catalog("to KILL a MOCKINGBIRD", "title")
